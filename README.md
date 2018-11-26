@@ -2,7 +2,7 @@
 
 To test against StreamJsonRpc implementation from .NET
 
-Based on implementations from ""
+Based on implementations from "Foundations of Python network programming" 3rd ed
 
 ## To use, first install requirements:
 
