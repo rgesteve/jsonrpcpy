@@ -10,10 +10,16 @@ def cb(err, res=None):
     if err:
         raise err
     print("Callback got: " + res)
-    sys.exit(0)
+
+def cb2(err, res=None):
+    if err:
+        print("Got an error while getting answer from add")
+        raise err
+    print(f"From the server got {res}")
 
 print("Sending message")
-print(rpc("greet", args=("John",), callback = cb))
+rpc("greet", args=("John",), callback = cb)
+rpc("add",   args=(7,2,), callback = cb2)
 print("Done!")
 
 while True:
