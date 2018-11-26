@@ -1,8 +1,8 @@
 import jsonrpyc
 
 class MyTarget(object):
-    def greet(self):
-        return "Hello, world!"
+    def greet(self, name):
+        return "Hello, world, for %s!" % name
 
 def main():
     print("Starting JSON server...")
